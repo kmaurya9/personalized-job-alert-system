@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+jobs_seen.db
+.env
+logs/
+.git/
+.claude/
+PRD.md
+plan.md
+*.md

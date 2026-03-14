@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  job-alert:
+    build: .
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - DB_PATH=/data/jobs_seen.db
+    volumes:
+      - job_data:/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+
+volumes:
+  job_data:

@@ -1,0 +1,5 @@
+python-jobspy
+python-telegram-bot
+schedule
+scikit-learn
+requests
