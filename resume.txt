@@ -1,24 +1,60 @@
-YOUR NAME
-Your Phone | your.email@example.com | linkedin.com/in/yourprofile | Your City, State
+Kshitij Maurya
+(732) 318-0018 | maurya.k@northeastern.edu | linkedin.com/in/kshitijmaurya9 | Boston, MA
 
 EDUCATION
-Your University                                                          City, State
-Degree Program | GPA: X.XX/4.00                                         Start – End
-Relevant Coursework: Course 1, Course 2, Course 3
+Northeastern University Boston, MA
+M.S. Computer Science | GPA: 3.83/4.00 Sep 2025 – May 2027 (Expected)
+Inderprastha Engineering College Ghaziabad, India
+B.Tech Computer Science | GPA: 8.07/10.00 Aug 2018 – Jun 2022
 
 PROFESSIONAL EXPERIENCE
-Company Name                                                             City, State
-Job Title                                                                Start – End
-• Describe what you did and the impact it had (quantify where possible)
-• Tech stack and tools used
-• Another achievement
+Amadeus Software Labs Bangalore, India
+Software Development Engineer 2 | American Airlines Apr 2025 – Aug 2025
+• Implemented high-traffic insurance-based RESTful APIs within the Digital Commerce layer to serve web & mobile platforms, driving $50M+ in annual revenue for Amadeus.
+• Developed AI-powered recommendation system using TensorFlow & scikit-learn on 100K+ traveler profiles; increased booking conversions by 30% and engagement by 40% through NLTK sentiment analysis pipeline.
+• Engineered AI-powered chatbot & internal dashboard using React, JavaScript, Node.js with LLM/RAG integration (LangChain + OpenAI API); decreased support tickets by 20%.
+• Revamped fault-tolerant microservices in Java achieving 99.99% uptime via multithreading using CompletableFuture, circuit-breaker & retry patterns.
+• Leveraged AI coding assistants (GitHub Copilot, Claude Code) to accelerate feature development by 30%; critically reviewed LLM-generated code for correctness, security & adherence to SOLID principles.
+• Mentored 3 interns on backend engineering using Object Oriented Programming & SOLID principles; led code reviews and API design discussions to enforce team coding standards.
+• Modernized monolithic Java EE applications into cloud-native microservices using Spring Boot & Docker, orchestrating deployments with Kubernetes & Jenkins, achieving 55% faster time-to-market for new features.
+• Supervised building Python scripts utilizing PySpark and dataframes to extract, transform and transfer data between PostgreSQL databases improving data accessibility by 95% and achieving a 26% performance boost.
+
+Software Development Engineer 1 | Etihad Airways Aug 2022 – Mar 2025
+• Modernized monolithic Java EE applications into cloud-native microservices using Spring Boot & Docker, achieving 55% faster time-to-market for enterprise features.
+• Devised event-driven architecture using Kafka to resolve data inconsistencies, achieving 30% reduction; demonstrated end-to-end ownership of the software development lifecycle.
+• Spearheaded data engineering workflows using Python, PySpark & SQL across PostgreSQL databases, improving data accessibility by 95% and achieving a 26% performance boost.
+• Optimized SQL queries & Hibernate caching strategies using Java design patterns (Circuit Breaker, Retry, Factory, Strategy), reducing API response times by 35% and alleviating database load.
+• Enhanced service monitoring using Grafana, Prometheus, CloudWatch & SNS, shrinking mean resolution time by 30% and reducing impacted customer transactions.
+• Supervised interns' Python/Jenkins CI/CD automation, saving 12 hours/week of manual effort and improving intern output by 17%.
+• Implemented RESTful APIs within Amadeus Digital Commerce layer, collaborating with Etihad Airways and Chubb, resulting in 25% increase in ancillary revenue.
+• Improved fault-tolerant microservices utilizing Spring Boot and Java achieving 99.99% uptime through multithreaded and asynchronous programming, reducing latency by 30%.
+• Devised event-driven architecture using Kafka to resolve data inconsistency issues, achieving 90% reduction via CompletableFuture.
 
 PROJECTS
-Project Name | Tech Stack
-• What you built and why
-• Key technical decisions or outcomes
+AWS Cloud Web Application | AWS, Terraform, Node.js, GitHub Actions, CI/CD, REST API
+• Built high-performance Node.js REST API on AWS, using Terraform IaC to provision & manage 45+ resources: VPC, EC2, RDS, S3, Lambda, Route 53.
+• Architected CI/CD pipeline via GitHub Actions with JUnit testing & Packer AMI creation; multi-AZ auto-scaling & load balancing achieving 99.9% uptime.
+• Established CloudWatch / SNS / DynamoDB monitoring & alerting, reducing MTTD by 45% for critical issues; secured with OAuth 2.0, JWT authentication, SSL/TLS.
+• Fortified app with OAuth 2.0, JWT authentication, SSL/TLS encryption, ensuring robust security & high availability.
 
-SKILLS
-Languages: Python, Java, etc.
-Frameworks: Spring Boot, React, etc.
-Tools: Docker, Git, etc.
+Kyokushin Karate Foundation of India | kyokushinfoundation.com | Next.js 16, TypeScript, PostgreSQL, Razorpay, Socket.io, Vercel
+• Pioneered the official platform for India's Kyokushin Karate federation — managing 300+ members across registration, payments, belt progression, and live tournament operations.
+• Engineered multi-step Razorpay payment flows, role-based dashboards (Admin/Instructor/Student), and real-time tournament bracket engine with WebSocket live scoring.
+• Developed QR-verified digital membership cards, merchandise store, and SEO-optimized public CMS.
+• Implemented rate limiting, idempotent transaction-safe APIs, and role-based authorization for a secure, production-grade platform.
+
+AWARDS & PUBLICATIONS
+Customer Catalyst Award Amadeus Software Labs
+• Recognized for end-to-end ownership of insurance API delivery for Etihad & Chubb, directly driving a 25% increase in ancillary revenue — one of the highest-impact launches across the Digital Commerce layer.
+Silent Soldier Award Amadeus Software Labs
+• Awarded for eliminating critical production API performance bottlenecks through SQL optimization & Hibernate caching, achieving a 35% reduction in response times under high-traffic load.
+Research Publication | Kshitij Maurya, "Birds Identification System using Deep Learning," IRJET, Vol. 9, Issue 4, 2022.
+
+TECHNICAL SKILLS
+Languages: Java, Python, C++, C#, JavaScript, TypeScript, Go, SQL, HTML, CSS, Bash
+Backend: Spring Boot, Node.js, .NET, Hibernate, RESTful APIs, React.js, Angular, Maven, Tomcat, JSON/XML
+AI / ML: TensorFlow, PyTorch, scikit-learn, LangChain, OpenAI API, RAG, NLTK, Hugging Face, Deep Learning
+AI & LLM Tools: GitHub Copilot, Claude Code, Cursor, Gemini, Agentic Workflows, LLM Integration & Output Validation
+DevOps & Cloud: AWS, GCP, Azure, Terraform, Docker, Kubernetes, Jenkins, Kafka, Helm, Packer, CI/CD, Linux/Unix
+Databases: PostgreSQL, MySQL, MongoDB, Redis, DynamoDB, ElasticSearch, Spark, GraphQL, NoSQL, SQL Server
+Observability & Tools: Grafana, Prometheus, CloudWatch, SNS | Git, Postman, Jira, Confluence, IntelliJ, OpenShift, Ansible
