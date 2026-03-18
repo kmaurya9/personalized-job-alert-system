@@ -12,6 +12,27 @@ logger = logging.getLogger(__name__)
 # Drop ZipRecruiter — constant 502 errors
 SITES = ["indeed", "linkedin", "google"]
 
+US_STATES = {
+    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+    "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
+    "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+    "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
+    "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY", "DC",
+}
+
+def is_us_based(row):
+    state = str(row.get("state", "") or "").strip().upper()
+    if state in US_STATES:
+        return True
+    country = str(row.get("country", "") or "").strip().lower()
+    if country in ("us", "usa", "united states", "united states of america"):
+        return True
+    city = str(row.get("city", "") or "").strip().lower()
+    # Remote jobs scraped without state/country — allow only if no foreign signal
+    if "remote" in city and state == "" and country == "":
+        return True
+    return False
+
 _scan_seen = set()
 
 def reset_scan_tracker():
@@ -269,7 +290,17 @@ def get_new_jobs(search_term, location):
         # Mark seen immediately
         mark_seen_in_scan(job_hash)
 
-        # FILTER 1: Must be intern/co-op
+        # FILTER 1: Must be US-based
+        if not is_us_based(row):
+            logger.debug("Non-US job skipped: %s @ %s (%s, %s)", title, company, row.get("city", ""), row.get("country", ""))
+            save_job(job_hash, {
+                "site": str(row.get("site", "")), "title": title,
+                "company": company, "location": loc,
+                "job_url": "", "description": "", "match_score": 0, "alerted": 0,
+            })
+            continue
+
+        # FILTER 3: Must be intern/co-op
         if not is_intern_or_coop(title):
             save_job(job_hash, {
                 "site": str(row.get("site", "")), "title": title,
@@ -278,7 +309,7 @@ def get_new_jobs(search_term, location):
             })
             continue
 
-        # FILTER 2: Block garbage
+        # FILTER 4: Block garbage
         if is_total_garbage(title):
             logger.debug("Garbage: %s @ %s", title, company)
             save_job(job_hash, {
@@ -288,7 +319,7 @@ def get_new_jobs(search_term, location):
             })
             continue
 
-        # FILTER 3: Check if actually posted today (anti-repost by date)
+        # FILTER 5: Check if actually posted today (anti-repost by date)
         date_posted = row.get("date_posted", None)
         date_verified = date_posted is not None
         if not is_posted_today(date_posted):
@@ -300,7 +331,7 @@ def get_new_jobs(search_term, location):
             })
             continue
 
-        # FILTER 4: Catch outdated season (e.g. "Summer 2025" in 2026)
+        # FILTER 6: Catch outdated season (e.g. "Summer 2025" in 2026)
         if is_outdated_season(title):
             logger.debug("Outdated: %s @ %s", title, company)
             save_job(job_hash, {
