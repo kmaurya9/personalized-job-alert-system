@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 def send_telegram_alert(job_data, match_score, reason=""):
     location = job_data.get("location", "").lower()
-    if "boston" in location or "chicago" in location:
+    if "boston" in location or "new york" in location:
         priority = "⭐ PRIORITY LOCATION"
     else:
         priority = "🌐 US / Remote"

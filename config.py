@@ -1,29 +1,36 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # ===== YOUR SETTINGS =====
 
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8633219125:AAELaaXsms_1iTY2E3i1-6FRffDWOQadnE4")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "8616520610")
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 # Roles + type combined (way better results)
 SEARCH_TERMS = [
-    "Data Analyst Intern",
-    "Data Analyst Co-op",
-    "Data Scientist Intern",
-    "Data Scientist Co-op",
-    "ML Engineer Intern",
-    "Machine Learning Intern",
+    # SWE / Backend
+    "Software Engineer Intern",
+    "Software Engineer Co-op",
+    "Backend Engineer Intern",
+    "Backend Developer Intern",
+    "Full Stack Engineer Intern",
+    # GenAI / Agentic AI
+    "Generative AI Intern",
+    "LLM Engineer Intern",
     "AI Engineer Intern",
-    "AI Intern Co-op",
-    "Data Engineer Intern",
-    "Data Engineer Co-op",
-    "Summer Data Analyst",
-    "Summer Data Science",
+    "AI Software Engineer Intern",
+    "Agentic AI Intern",
+    "AI Agent Engineer Intern",
 ]
 
 # Locations
 LOCATIONS = [
     "Boston, MA",
+    "New York, NY",
+    "San Francisco, CA",
+    "Seattle, WA",
+    "Austin, TX",
     "Chicago, IL",
     "Remote",
 ]

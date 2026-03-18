@@ -1,0 +1,99 @@
+====================================================================
+  JOB ALERT v4.0 — RAILWAY DEPLOYMENT (Step-by-Step)
+====================================================================
+
+Railway is a free cloud platform that will run your bot 24/7
+(well, 7 AM - 11 PM thanks to the sleep schedule).
+
+TOTAL TIME: ~5 minutes
+COST: Free (500 hours/month free tier is enough)
+
+--------------------------------------------------------------------
+STEP 1: Create a Railway account
+--------------------------------------------------------------------
+1. Go to https://railway.app
+2. Click "Login" → "Login with GitHub"
+3. Authorize Railway to access your GitHub account
+4. That's it — you now have a Railway account
+
+--------------------------------------------------------------------
+STEP 2: Create a new project from your GitHub repo
+--------------------------------------------------------------------
+1. On the Railway dashboard, click "New Project"
+2. Click "Deploy from GitHub Repo"
+3. Select "takshil6/job-alert" from the repo list
+   (If you don't see it, click "Configure GitHub App" and grant access)
+4. Railway will automatically detect the Dockerfile and start building
+
+--------------------------------------------------------------------
+STEP 3: Set environment variables
+--------------------------------------------------------------------
+1. Click on your deployed service (the purple box)
+2. Go to the "Variables" tab
+3. Click "New Variable" and add these THREE variables:
+
+   TELEGRAM_BOT_TOKEN = 8633219125:AAELaaXsms_1iTY2E3i1-6FRffDWOQadnE4
+   TELEGRAM_CHAT_ID   = 8616520610
+   DB_PATH            = /data/jobs_seen.db
+
+   (These are your current values from config.py)
+
+--------------------------------------------------------------------
+STEP 4: Add a persistent volume (so your database survives restarts)
+--------------------------------------------------------------------
+1. Click on your service → go to the "Volumes" tab
+2. Click "New Volume"
+3. Mount path: /data
+4. Name: job-data (or anything you want)
+5. Click "Create"
+
+--------------------------------------------------------------------
+STEP 5: Verify it's running
+--------------------------------------------------------------------
+1. Go to the "Deployments" tab
+2. Click on the latest deployment
+3. Check the logs — you should see:
+   "Job Alert System v4.0 — Intern/Co-op Edition"
+   "Scanning at XX:XX PM..."
+4. Check your Telegram — alerts should start arriving!
+
+--------------------------------------------------------------------
+DONE! Your bot is now running 24/7 on Railway's free tier.
+--------------------------------------------------------------------
+
+NOTES:
+- The bot sleeps between 11 PM and 7 AM ET (saves free-tier hours)
+- If you update the code, just push to GitHub — Railway auto-deploys
+- Your database (jobs_seen.db) persists across deploys via the volume
+- To check logs anytime: Railway dashboard → your service → Deployments → Logs
+
+====================================================================
+  ALTERNATIVE: If Railway asks for a credit card or doesn't work
+====================================================================
+
+Option A: Render.com (also free)
+  1. Go to https://render.com
+  2. Sign up with GitHub
+  3. New → Background Worker → Connect your "job-alert" repo
+  4. Set the same 3 environment variables
+  5. Deploy
+
+Option B: Run locally with Docker
+  1. Create a file called ".env" in the project folder with:
+     TELEGRAM_BOT_TOKEN=8633219125:AAELaaXsms_1iTY2E3i1-6FRffDWOQadnE4
+     TELEGRAM_CHAT_ID=8616520610
+  2. Run: docker compose up -d
+  3. It runs in the background on your PC
+
+====================================================================
+  ONCE DEPLOYED: Give Claude Code the Railway API token so it can
+  manage deployments for you in the future.
+
+  To get your token:
+  1. Go to https://railway.app/account/tokens
+  2. Click "Create Token"
+  3. Name it "claude-code"
+  4. Copy the token
+  5. Paste it into a file called "railway_token.txt" in this folder
+  6. Tell Claude Code to read it
+====================================================================

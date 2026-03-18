@@ -132,17 +132,15 @@ def is_intern_or_coop(title):
 def is_strong_title_match(title):
     title_lower = title.lower()
     strong_role_keywords = [
-        "data analyst", "data science", "data scientist",
-        "data engineer", "data engineering",
-        "machine learning", "ml engineer", "ml intern",
-        "ai engineer", "ai intern", "ai developer",
-        "artificial intelligence",
-        "deep learning", "nlp", "natural language",
-        "computer vision",
-        "business intelligence", "bi developer", "bi analyst",
-        "analytics engineer", "analytics intern",
-        "quantitative analyst", "quantitative intern",
-        "applied scientist", "research scientist",
+        # SWE / Backend
+        "software engineer", "backend engineer", "backend developer",
+        "full stack", "fullstack", "full-stack",
+        # GenAI / Agentic
+        "generative ai", "gen ai", "genai",
+        "llm engineer", "large language model",
+        "agentic ai", "agentic", "ai agent",
+        # AI Engineering (broad — JD will determine if it's GenAI)
+        "ai engineer", "ai intern", "ai developer", "ai software",
     ]
     return any(kw in title_lower for kw in strong_role_keywords)
 

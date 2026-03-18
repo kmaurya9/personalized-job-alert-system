@@ -1,57 +1,60 @@
-Sanket Koli
-Boston, MA — (617) 756-9473 — koli.sa@northeastern.edu — linkedin.com/in/sanket-koli
+Kshitij Maurya
+(732) 318-0018 | maurya.k@northeastern.edu | linkedin.com/in/kshitijmaurya9 | Boston, MA
+
 EDUCATION
 Northeastern University Boston, MA
-Master of Science in Data Analytics Engineering Sep 2025 - Present
-Relevant Coursework: Foundations for Data Analytics Engineering, Data Management for Analytics, Data Mining.
-D.Y. Patil University Navi Mumbai, India
-Bachelor of Technology in Information Technology Jul 2022 - Jun 2025
-Relevant Coursework: Artificial Intelligence, Applied Natural Language Processing, Machine Learning, Big Data Analytics,
-Design & Analysis of Algorithms
+M.S. Computer Science | GPA: 3.83/4.00 Sep 2025 – May 2027 (Expected)
+Inderprastha Engineering College Ghaziabad, India
+B.Tech Computer Science | GPA: 8.07/10.00 Aug 2018 – Jun 2022
+
 PROFESSIONAL EXPERIENCE
-Research Data Associate (Applied Analytics) Jun 2023 - May 2025
-D.Y. Patil University Navi Mumbai, India
-• Architected a comprehensive data governance platform to digitize faculty research submissions, implementing Role-Based
-Access Control (RBAC) that cut multi-stage approval turnaround time by 40%.
-• Orchestrated the automated ingestion of over 750,000 unstructured data points monthly using Python, enforcing 12
-strict quality constraints that reduced manual data entry errors by 95%.
-• Designed KPI leaderboards to track departmental research output, providing actionable insights that led to a 15% increase
-in research grant applications and optimized resource allocation.
-• Replaced manual legacy tracking with a centralized SQL-backed architecture, reducing data retrieval latency by 40% and
-saving the team 6+ hours of manual reporting work weekly.
-• Earned a Letter of Appreciation from the Principal for spearheading this digital transformation and personally training 2
-junior interns on platform maintenance.
+Amadeus Software Labs Bangalore, India
+Software Development Engineer 2 | American Airlines Apr 2025 – Aug 2025
+• Implemented high-traffic insurance-based RESTful APIs within the Digital Commerce layer to serve web & mobile platforms, driving $50M+ in annual revenue for Amadeus.
+• Developed AI-powered recommendation system using TensorFlow & scikit-learn on 100K+ traveler profiles; increased booking conversions by 30% and engagement by 40% through NLTK sentiment analysis pipeline.
+• Engineered AI-powered chatbot & internal dashboard using React, JavaScript, Node.js with LLM/RAG integration (LangChain + OpenAI API); decreased support tickets by 20%.
+• Revamped fault-tolerant microservices in Java achieving 99.99% uptime via multithreading using CompletableFuture, circuit-breaker & retry patterns.
+• Leveraged AI coding assistants (GitHub Copilot, Claude Code) to accelerate feature development by 30%; critically reviewed LLM-generated code for correctness, security & adherence to SOLID principles.
+• Mentored 3 interns on backend engineering using Object Oriented Programming & SOLID principles; led code reviews and API design discussions to enforce team coding standards.
+• Modernized monolithic Java EE applications into cloud-native microservices using Spring Boot & Docker, orchestrating deployments with Kubernetes & Jenkins, achieving 55% faster time-to-market for new features.
+• Supervised building Python scripts utilizing PySpark and dataframes to extract, transform and transfer data between PostgreSQL databases improving data accessibility by 95% and achieving a 26% performance boost.
+
+Software Development Engineer 1 | Etihad Airways Aug 2022 – Mar 2025
+• Modernized monolithic Java EE applications into cloud-native microservices using Spring Boot & Docker, achieving 55% faster time-to-market for enterprise features.
+• Devised event-driven architecture using Kafka to resolve data inconsistencies, achieving 30% reduction; demonstrated end-to-end ownership of the software development lifecycle.
+• Spearheaded data engineering workflows using Python, PySpark & SQL across PostgreSQL databases, improving data accessibility by 95% and achieving a 26% performance boost.
+• Optimized SQL queries & Hibernate caching strategies using Java design patterns (Circuit Breaker, Retry, Factory, Strategy), reducing API response times by 35% and alleviating database load.
+• Enhanced service monitoring using Grafana, Prometheus, CloudWatch & SNS, shrinking mean resolution time by 30% and reducing impacted customer transactions.
+• Supervised interns' Python/Jenkins CI/CD automation, saving 12 hours/week of manual effort and improving intern output by 17%.
+• Implemented RESTful APIs within Amadeus Digital Commerce layer, collaborating with Etihad Airways and Chubb, resulting in 25% increase in ancillary revenue.
+• Improved fault-tolerant microservices utilizing Spring Boot and Java achieving 99.99% uptime through multithreaded and asynchronous programming, reducing latency by 30%.
+• Devised event-driven architecture using Kafka to resolve data inconsistency issues, achieving 90% reduction via CompletableFuture.
+
 PROJECTS
-SOVI — RAG-Based Medical Decision Support System (LangChain, Qdrant, LLMs)
-• Engineered an end-to-end RAG pipeline using LangChain and Qdrant, processing 1,000+ FDA adverse event reports
-and clinical trial records with source-cited responses in under 3 seconds.
-• Built data ingestion pipelines to scrape FDA FAERS and ClinicalTrials.gov APIs, vectorizing 1,152 document chunks with
-semantic search achieving 99%+ retrieval relevance.
-• Deployed a Gradio interface that reduced medical information lookup from 2+ hours of manual research to under 3 seconds,
-a 2,400x speedup with full source traceability.
-SaaS Customer Churn & Retention Optimization (Python, SQL, XGBoost)
-• Designed a predictive modeling pipeline to analyze customer lifecycle data, identifying at-risk users and enabling targeted
-strategies that improved retention by 12% in simulation.
-• Reconstructed user session paths using SQL (Window Functions), isolating low-usage features and uncovering drop-off
-points to optimize the customer journey.
-• Implemented Gradient Boosting models (XGBoost) to predict churn probability, achieving an AUC-ROC of 0.85 and reducing
-false positives through calibration.
-• Automated model retraining pipelines using Python and cloud infrastructure, saving 10 hours per week in manual deploy-
-ment time and ensuring up-to-date model performance.
-Real-Estate Financial Forecasting & Market Dashboard (Python, Time-Series, Tableau)
-• Built a financial forecasting model using ARIMA and Prophet to analyze U.S. housing market trends, predicting price
-fluctuations with 85% accuracy on historical test data.
-• Developed an interactive dashboard to visualize long-term market volatility and seasonal trends, identifying key investment
-growth zones and improving potential ROI by 15% for stakeholders.
-• Processed and cleaned large-scale time-series datasets, handling missing values and outliers to ensure robust model performance
-and reliable forward-looking insights.
-SKILLS
-Languages & Core: Python, SQL (CTEs, Window Functions), R, Bash/Shell, Object-Oriented Programming (OOP)
-AI & GenAI Engineering: RAG (Retrieval-Augmented Generation), LLM Agents (LangChain), Fine-Tuning, Hugging Face,
-Vector Databases, Prompt Engineering, OpenAI API
-Machine Learning & Data Science: Deep Learning (PyTorch, TensorFlow), Scikit-learn, XGBoost, Causal Inference, Time-
-Series Forecasting, Feature Engineering, Hypothesis Testing
-Data Engineering & Analytics: ETL Pipelines, Data Warehousing Concepts, Data Cleaning & Automation (Pandas,
-NumPy), Dimensional Modeling, Web Scraping
-Tools & Cloud Platforms: AWS (S3, EC2), Docker, Git/GitHub, CI/CD Concepts, Power BI (DAX), Tableau, Excel
-(Advanced Macros), VS Code, Jupyter, Gradio
+AWS Cloud Web Application | AWS, Terraform, Node.js, GitHub Actions, CI/CD, REST API
+• Built high-performance Node.js REST API on AWS, using Terraform IaC to provision & manage 45+ resources: VPC, EC2, RDS, S3, Lambda, Route 53.
+• Architected CI/CD pipeline via GitHub Actions with JUnit testing & Packer AMI creation; multi-AZ auto-scaling & load balancing achieving 99.9% uptime.
+• Established CloudWatch / SNS / DynamoDB monitoring & alerting, reducing MTTD by 45% for critical issues; secured with OAuth 2.0, JWT authentication, SSL/TLS.
+• Fortified app with OAuth 2.0, JWT authentication, SSL/TLS encryption, ensuring robust security & high availability.
+
+Kyokushin Karate Foundation of India | kyokushinfoundation.com | Next.js 16, TypeScript, PostgreSQL, Razorpay, Socket.io, Vercel
+• Pioneered the official platform for India's Kyokushin Karate federation — managing 300+ members across registration, payments, belt progression, and live tournament operations.
+• Engineered multi-step Razorpay payment flows, role-based dashboards (Admin/Instructor/Student), and real-time tournament bracket engine with WebSocket live scoring.
+• Developed QR-verified digital membership cards, merchandise store, and SEO-optimized public CMS.
+• Implemented rate limiting, idempotent transaction-safe APIs, and role-based authorization for a secure, production-grade platform.
+
+AWARDS & PUBLICATIONS
+Customer Catalyst Award Amadeus Software Labs
+• Recognized for end-to-end ownership of insurance API delivery for Etihad & Chubb, directly driving a 25% increase in ancillary revenue — one of the highest-impact launches across the Digital Commerce layer.
+Silent Soldier Award Amadeus Software Labs
+• Awarded for eliminating critical production API performance bottlenecks through SQL optimization & Hibernate caching, achieving a 35% reduction in response times under high-traffic load.
+Research Publication | Kshitij Maurya, "Birds Identification System using Deep Learning," IRJET, Vol. 9, Issue 4, 2022.
+
+TECHNICAL SKILLS
+Languages: Java, Python, C++, C#, JavaScript, TypeScript, Go, SQL, HTML, CSS, Bash
+Backend: Spring Boot, Node.js, .NET, Hibernate, RESTful APIs, React.js, Angular, Maven, Tomcat, JSON/XML
+AI / ML: TensorFlow, PyTorch, scikit-learn, LangChain, OpenAI API, RAG, NLTK, Hugging Face, Deep Learning
+AI & LLM Tools: GitHub Copilot, Claude Code, Cursor, Gemini, Agentic Workflows, LLM Integration & Output Validation
+DevOps & Cloud: AWS, GCP, Azure, Terraform, Docker, Kubernetes, Jenkins, Kafka, Helm, Packer, CI/CD, Linux/Unix
+Databases: PostgreSQL, MySQL, MongoDB, Redis, DynamoDB, ElasticSearch, Spark, GraphQL, NoSQL, SQL Server
+Observability & Tools: Grafana, Prometheus, CloudWatch, SNS | Git, Postman, Jira, Confluence, IntelliJ, OpenShift, Ansible
