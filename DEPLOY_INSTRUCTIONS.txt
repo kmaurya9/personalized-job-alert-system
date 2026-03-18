@@ -21,7 +21,7 @@ STEP 2: Create a new project from your GitHub repo
 --------------------------------------------------------------------
 1. On the Railway dashboard, click "New Project"
 2. Click "Deploy from GitHub Repo"
-3. Select "takshil6/job-alert" from the repo list
+3. Select your forked repo from the list
    (If you don't see it, click "Configure GitHub App" and grant access)
 4. Railway will automatically detect the Dockerfile and start building
 
@@ -30,13 +30,14 @@ STEP 3: Set environment variables
 --------------------------------------------------------------------
 1. Click on your deployed service (the purple box)
 2. Go to the "Variables" tab
-3. Click "New Variable" and add these THREE variables:
+3. Click "New Variable" and add these FOUR variables:
 
-   TELEGRAM_BOT_TOKEN = 8633219125:AAELaaXsms_1iTY2E3i1-6FRffDWOQadnE4
-   TELEGRAM_CHAT_ID   = 8616520610
+   TELEGRAM_BOT_TOKEN = <your bot token from BotFather>
+   TELEGRAM_CHAT_ID   = <your Telegram chat ID>
    DB_PATH            = /data/jobs_seen.db
+   TZ                 = America/New_York
 
-   (These are your current values from config.py)
+   See README.md → Telegram Setup for how to get these values.
 
 --------------------------------------------------------------------
 STEP 4: Add a persistent volume (so your database survives restarts)
@@ -74,26 +75,14 @@ NOTES:
 Option A: Render.com (also free)
   1. Go to https://render.com
   2. Sign up with GitHub
-  3. New → Background Worker → Connect your "job-alert" repo
-  4. Set the same 3 environment variables
+  3. New → Background Worker → Connect your repo
+  4. Set the same 4 environment variables
   5. Deploy
 
 Option B: Run locally with Docker
-  1. Create a file called ".env" in the project folder with:
-     TELEGRAM_BOT_TOKEN=8633219125:AAELaaXsms_1iTY2E3i1-6FRffDWOQadnE4
-     TELEGRAM_CHAT_ID=8616520610
-  2. Run: docker compose up -d
-  3. It runs in the background on your PC
+  1. Create a .env file with your credentials (see README.md)
+  2. Set DB_PATH=jobs_seen.db in .env (not /data for local)
+  3. Run: docker compose up -d
+  4. It runs in the background on your machine
 
-====================================================================
-  ONCE DEPLOYED: Give Claude Code the Railway API token so it can
-  manage deployments for you in the future.
-
-  To get your token:
-  1. Go to https://railway.app/account/tokens
-  2. Click "Create Token"
-  3. Name it "claude-code"
-  4. Copy the token
-  5. Paste it into a file called "railway_token.txt" in this folder
-  6. Tell Claude Code to read it
 ====================================================================
