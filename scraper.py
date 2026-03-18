@@ -27,10 +27,11 @@ def is_us_based(row):
     country = str(row.get("country", "") or "").strip().lower()
     if country in ("us", "usa", "united states", "united states of america"):
         return True
+    # No location signal at all — benefit of the doubt (we search US locations)
     city = str(row.get("city", "") or "").strip().lower()
-    # Remote jobs scraped without state/country — allow only if no foreign signal
-    if "remote" in city and state == "" and country == "":
+    if state == "" and country == "":
         return True
+    # Explicit non-US country — reject
     return False
 
 _scan_seen = set()
