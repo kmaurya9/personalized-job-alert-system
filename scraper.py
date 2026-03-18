@@ -300,7 +300,7 @@ def get_new_jobs(search_term, location):
             })
             continue
 
-        # FILTER 3: Must be intern/co-op
+        # FILTER 2: Must be intern/co-op
         if not is_intern_or_coop(title):
             save_job(job_hash, {
                 "site": str(row.get("site", "")), "title": title,
@@ -309,7 +309,7 @@ def get_new_jobs(search_term, location):
             })
             continue
 
-        # FILTER 4: Block garbage
+        # FILTER 3: Block garbage
         if is_total_garbage(title):
             logger.debug("Garbage: %s @ %s", title, company)
             save_job(job_hash, {
@@ -319,7 +319,7 @@ def get_new_jobs(search_term, location):
             })
             continue
 
-        # FILTER 5: Check if actually posted today (anti-repost by date)
+        # FILTER 4: Check if actually posted today (anti-repost by date)
         date_posted = row.get("date_posted", None)
         date_verified = date_posted is not None
         if not is_posted_today(date_posted):
@@ -331,7 +331,7 @@ def get_new_jobs(search_term, location):
             })
             continue
 
-        # FILTER 6: Catch outdated season (e.g. "Summer 2025" in 2026)
+        # FILTER 5: Catch outdated season (e.g. "Summer 2025" in 2026)
         if is_outdated_season(title):
             logger.debug("Outdated: %s @ %s", title, company)
             save_job(job_hash, {
