@@ -20,19 +20,27 @@ US_STATES = {
     "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY", "DC",
 }
 
-def is_us_based(row):
+def is_us_based(row, search_location=""):
     state = str(row.get("state", "") or "").strip().upper()
     if state in US_STATES:
         return True
+
     country = str(row.get("country", "") or "").strip().lower()
     if country in ("us", "usa", "united states", "united states of america"):
         return True
-    # No location signal at all — benefit of the doubt (we search US locations)
+
+    # Explicit non-US country — always reject
+    if country != "":
+        return False
+
+    # No country info — use search context
     city = str(row.get("city", "") or "").strip().lower()
-    if state == "" and country == "":
+    if "remote" in search_location.lower():
+        # Remote search: only allow if city is empty or says "remote"
+        return city == "" or "remote" in city
+    else:
+        # City-specific US search (e.g. "Boston, MA") — trust the search constraint
         return True
-    # Explicit non-US country — reject
-    return False
 
 _scan_seen = set()
 
@@ -292,7 +300,7 @@ def get_new_jobs(search_term, location):
         mark_seen_in_scan(job_hash)
 
         # FILTER 1: Must be US-based
-        if not is_us_based(row):
+        if not is_us_based(row, location):
             logger.debug("Non-US job skipped: %s @ %s (%s, %s)", title, company, row.get("city", ""), row.get("country", ""))
             save_job(job_hash, {
                 "site": str(row.get("site", "")), "title": title,
